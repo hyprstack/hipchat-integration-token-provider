@@ -1,0 +1,24 @@
+{
+  "name": "hipchat-integration-app",
+  "version": "1.0.0",
+  "description": "Hipchat integation app to supply access tokens to end users.",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyprstack/hipchat-integration-token-provider.git"
+  },
+  "author": "{name: Mario Mendes, email:mario.c.mendes1985@gmail.com}",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyprstack/hipchat-integration-token-provider/issues"
+  },
+  "homepage": "https://github.com/hyprstack/hipchat-integration-token-provider#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  }
+}
