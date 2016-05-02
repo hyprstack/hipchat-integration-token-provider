@@ -6,12 +6,14 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/get-token', function (req, res) {
+router.post('/get-token', function (req, res) {
+  console.log(req.headers['x-node-hipchat-logger-hmac-sha256']);
   if (req.headers.isOriginVerified) {
     res.status(200).send('123456789'); // fake token
+    return;
   }
-  var err = 'Invalid HMAC';
-  res.status(401).send({error: err});
+  var err = new Error('Invalid HMAC');
+  res.status(401).send(err);
 });
 
 module.exports = router;
