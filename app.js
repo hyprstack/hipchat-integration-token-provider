@@ -12,6 +12,7 @@ app.use(bodyParser.json({
     if (originHAMC) {
       var sharedSecret = 'xx123aardvaark321xx';
       var digest = crypto.createHmac('SHA256', sharedSecret).update('hipchat-logger').digest('base64');
+      console.log('Calculated hash: ' + digest);
       var condition = (digest === originHAMC);
       req.headers.isOriginVerified = condition;
     }
